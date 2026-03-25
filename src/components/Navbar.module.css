@@ -1,0 +1,65 @@
+.container {
+  /* border: 1px solid black; */
+  position: fixed;
+  left: 0;
+  margin: 10rem 0;
+  padding: 2px;
+  width: 180px;
+}
+
+.list {
+  position: relative;
+  list-style: none;
+  margin: 5px;
+  padding: 2px;
+}
+
+.list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  margin: 10px auto;
+  padding: 0 20px;
+  width: 55px;
+  transition: opacity 1s ease;
+  transition: width 0.5s ease;
+  -webkit-transition: opacity 1s ease;
+  -webkit-transition: width 0.5s ease;
+}
+
+li :first-child {
+  position: absolute;
+  left: 18px;
+  margin-right: 10px;
+}
+
+li p {
+  color: white;
+  background-color: transparent;
+  margin-left: 40px;
+  opacity: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.list :hover {
+  background-color: #ffb400;
+  cursor: pointer;
+  width: 160px;
+}
+
+.list :hover p {
+  opacity: 1;
+}
+
+.list li :first-child:hover {
+  position: relative;
+}
