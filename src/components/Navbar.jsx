@@ -5,7 +5,7 @@ import styles from './Navbar.module.css';
 
 function Navbar() {
   return (
-    <nav className={styles.container}>
+    <nav className={styles.nav}>
       <ul className={styles.list}>
         <NavLink to="/">
           <li>

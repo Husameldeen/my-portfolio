@@ -1,10 +1,14 @@
-.container {
+.nav {
   /* border: 1px solid black; */
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   left: 0;
   margin: 10rem 0;
   padding: 2px;
   width: 180px;
+  z-index: 10;
 }
 
 .list {
@@ -24,10 +28,14 @@
   margin: 10px auto;
   padding: 0 20px;
   width: 55px;
-  transition: opacity 1s ease;
-  transition: width 0.5s ease;
-  -webkit-transition: opacity 1s ease;
-  -webkit-transition: width 0.5s ease;
+  transition: opacity 0.3s ease;
+  transition: width 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+a:global(.active) li {
+  background-color: #ffb400;
 }
 
 li :first-child {
