@@ -1,0 +1,114 @@
+.infoContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  color: #eee;
+}
+
+.infoContainer .title {
+  position: relative;
+  height: 200px;
+}
+
+.infoContainer .title .transperantTitle {
+  font-size: 2.5rem;
+  line-height: 1;
+
+  font-weight: 900;
+  opacity: 5%;
+  color: #eee;
+  text-transform: uppercase;
+}
+
+.infoContainer .title .bigTitle {
+  position: absolute;
+  top: 42px;
+  left: 80px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.infoContainer .title h1 {
+  font-weight: 900;
+}
+
+.infoContainer .smallTitle {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-self: flex-start;
+  margin-left: 100px;
+}
+
+.infoContainer .smallTitle h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.infoContainer .info {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70vw;
+}
+
+.infoContainer .leftInfo,
+.infoContainer .rightInfo {
+  padding: 0 10px;
+  position: relative;
+  width: 50%;
+  line-height: 2;
+}
+
+.infoContainer .info h3 {
+  position: relative;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.infoContainer .info h3 span {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.infoContainer .info h3.email span {
+  text-transform: lowercase;
+}
+
+.infoContainer .downloadBtn {
+  color: #eee;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 25%;
+  height: 50px;
+  margin-top: 10px;
+  background: transparent;
+  border: 2px solid #ffb400;
+  border-radius: 25px;
+  box-shadow:
+    5px 5px 15px rgba(0, 0, 0, 0.25),
+    5px 15px 15px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75) !important;
+}
+
+.infoContainer .downloadBtn:hover {
+  transform: scale(1.01);
+}
+
+.infoContainer .downloadBtn:active {
+  transform: scale(0.95);
+}
+
+.infoContainer span {
+  color: #ffb400;
+}

@@ -1,0 +1,60 @@
+.skillsContainer {
+  position: relative;
+
+  align-items: center;
+
+  padding: 1rem 2rem;
+  margin-bottom: 10px;
+  width: 100%;
+  color: #eee;
+}
+
+.skillsContainer .smallTitle {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-self: flex-start;
+  margin-left: 100px;
+}
+
+.skillsContainer .smallTitle h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.skillsContainer .imgContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.skillsContainer .imgContainer .img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  transition: transform 0.75s ease;
+}
+
+.skillsContainer .imgContainer img {
+  height: 130px;
+}
+
+.skillsContainer .imgContainer h6 {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin: 10px;
+}
+
+.skillsContainer .imgContainer .img:hover {
+  transform: scale(1.2);
+}
+
+.skillsContainer .imgContainer .img:hover > h6 {
+  color: #ffb400;
+}
+
+.skillsContainer span {
+  color: #ffb400;
+}

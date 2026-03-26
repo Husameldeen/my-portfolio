@@ -1,0 +1,36 @@
+.dataCard {
+  position: relative;
+  display: flex;
+  height: 150px;
+  max-width: 400px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin: 10px 30px;
+  padding: 5px;
+}
+
+.dataCard h1 {
+  margin-left: 10px;
+
+  color: #ffb400;
+  font-size: 2.5rem;
+}
+
+.dataCard h2 {
+  color: #ffb400;
+}
+
+.dataCard h3 {
+  font-size: 1.2rem;
+  margin-left: 34px;
+  margin-top: 57px;
+  text-transform: uppercase;
+  color: #eee;
+}
+
+.dataCard span {
+  position: absolute;
+  top: 70px;
+  left: 13px;
+  color: #eee;
+}

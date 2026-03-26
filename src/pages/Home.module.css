@@ -34,7 +34,7 @@
   text-transform: capitalize;
 }
 
-h1 span {
+.mainContainer .rightContainer h1 span {
   color: #ffb400;
   font-weight: 900;
 }
