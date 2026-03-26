@@ -1,18 +1,10 @@
 import styles from './PersonalInfo.module.css';
+import Title from './Title';
 
 function PersonalInfo() {
   return (
     <div className={styles.infoContainer}>
-      <div className={styles.title}>
-        <div className={styles.transperantTitle}>
-          <h1>About me</h1>
-        </div>
-        <div className={styles.bigTitle}>
-          <h1>
-            About <span>Me</span>
-          </h1>
-        </div>
-      </div>
+      <Title trancperant={'About me'} title={'about'} span={'me'} />
       <div className={styles.smallTitle}>
         <h2>personal infos</h2>
       </div>
@@ -36,7 +28,7 @@ function PersonalInfo() {
             address: <span>Khartoum state, sudan</span>
           </h3>
           <h3>
-            whatsapp: <span>+249995644304</span>
+            Phone: <span>+249120927548</span>
           </h3>
           <h3 className={styles.email}>
             email: <span>mhusam87@gmail.com</span>

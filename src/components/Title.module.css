@@ -1,0 +1,31 @@
+.title {
+  position: relative;
+  height: 100px;
+}
+
+.title .transperantTitle {
+  font-size: 2.5rem;
+  line-height: 1;
+
+  font-weight: 900;
+  opacity: 5%;
+  color: #eee;
+  text-transform: uppercase;
+}
+
+.title .bigTitle {
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.title h1 {
+  margin: 0;
+  font-weight: 900;
+}
+
+.bigTitle span {
+  color: #ffb400;
+}

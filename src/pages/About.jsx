@@ -1,5 +1,6 @@
 import Background from '../components/Background';
 import Card from '../components/Card';
+import Education from '../components/Education';
 import Navbar from '../components/Navbar';
 import PersonalInfo from '../components/PersonalInfo';
 import Skills from '../components/Skills';

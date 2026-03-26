@@ -9,33 +9,6 @@
   color: #eee;
 }
 
-.infoContainer .title {
-  position: relative;
-  height: 200px;
-}
-
-.infoContainer .title .transperantTitle {
-  font-size: 2.5rem;
-  line-height: 1;
-
-  font-weight: 900;
-  opacity: 5%;
-  color: #eee;
-  text-transform: uppercase;
-}
-
-.infoContainer .title .bigTitle {
-  position: absolute;
-  top: 42px;
-  left: 80px;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-}
-
-.infoContainer .title h1 {
-  font-weight: 900;
-}
-
 .infoContainer .smallTitle {
   position: relative;
   display: flex;
