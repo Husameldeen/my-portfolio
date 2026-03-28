@@ -1,7 +1,12 @@
 import styles from './SlideShow.module.css';
 
-function slideshow({ isGalleryOpen, handleCloseGallery, projectSlide }) {
-  console.log(projectSlide);
+function slideshow({
+  isGalleryOpen,
+  handleCloseGallery,
+  projectSlide,
+  handleNextSlide,
+  handlePrevSlide,
+}) {
   return (
     <>
       <ul className={isGalleryOpen ? `${styles.animatable}` : ''}>
@@ -9,13 +14,13 @@ function slideshow({ isGalleryOpen, handleCloseGallery, projectSlide }) {
           <figure>
             <figcaption>
               <h3>{projectSlide.projectName}</h3>
-              <div className={styles.row}>
+              {/* <div className={styles.row}>
                 <span className={`${styles['ft-wt-600']}`}>
-                  <a href={projectSlide.link} target="_blank">
-                    Preview : {projectSlide.link}
+                  <a href={projectSlide.projectLink} target="_blank">
+                    Preview : {projectSlide.projectLink}
                   </a>
                 </span>
-              </div>
+              </div> */}
             </figcaption>
 
             <img src={`projects/${projectSlide.procetImage}.jpg`} alt={projectSlide.projectName} />
@@ -23,10 +28,10 @@ function slideshow({ isGalleryOpen, handleCloseGallery, projectSlide }) {
         </li>
       </ul>
       <nav>
-        <span className={`${styles.icon} ${styles.navPrev}`}>
+        <span className={`${styles.icon} ${styles.navPrev}`} onClick={() => handlePrevSlide()}>
           <img src="projects/navigation/left-arrow.png" alt="previous" />
         </span>
-        <span className={`${styles.icon} ${styles.navNext}`}>
+        <span className={`${styles.icon} ${styles.navNext}`} onClick={() => handleNextSlide()}>
           <img src="projects/navigation/right-arrow.png" alt="next" />
         </span>
         <span className={`${styles.navClose}`} onClick={handleCloseGallery}>

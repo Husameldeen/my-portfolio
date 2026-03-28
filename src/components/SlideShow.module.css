@@ -71,8 +71,9 @@ ul > li.current:after {
 }
 
 .show figure img {
-  width: 60vw;
-  height: 60vh;
+  object-fit: cover;
+  max-width: 60vw;
+  max-height: 60vh;
   background: #252525;
 
   /**/

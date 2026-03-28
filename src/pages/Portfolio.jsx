@@ -66,6 +66,22 @@ function Portfolio() {
     setCurrentSlide(null);
   }
 
+  function handleNextSlide() {
+    if (currentSlide + 1 === projects.length) {
+      setCurrentSlide(null);
+      setIsGallaryOpen(false);
+    }
+    setCurrentSlide((current) => current + 1);
+  }
+
+  function handlePrevSlide() {
+    if (currentSlide === 0) {
+      setCurrentSlide(null);
+      setIsGallaryOpen(false);
+    }
+    setCurrentSlide((current) => current - 1);
+  }
+
   return (
     <div>
       <Background />
@@ -105,8 +121,9 @@ function Portfolio() {
               <SlideShow
                 isGalleryOpen={isGalleryOpen}
                 handleCloseGallery={handleCloseGallery}
-                currentSlide={currentSlide}
                 projectSlide={projects.at(currentSlide)}
+                handleNextSlide={handleNextSlide}
+                handlePrevSlide={handlePrevSlide}
               />
             </section>
           </div>

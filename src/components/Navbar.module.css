@@ -49,6 +49,7 @@ li p {
   background-color: transparent;
   margin-left: 40px;
   opacity: 0;
+  visibility: hidden;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -66,6 +67,7 @@ a:visited {
 
 .list li:hover p {
   opacity: 1;
+  visibility: visible;
 }
 
 .list li :first-child:hover {
