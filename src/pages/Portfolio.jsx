@@ -1,14 +1,76 @@
+import { useState } from 'react';
 import Background from '../components/Background';
+import SlideShow from '../components/SlideShow';
 import Navbar from '../components/Navbar';
-import Title from '../components/Title';
 import styles from './Portfolio.module.css';
 
+const projects = [
+  {
+    projectName: 'Image Project 1',
+    projectLink: 'www.#.com',
+    procetImage: 'project-1',
+  },
+  {
+    projectName: 'Image Project 2',
+    projectLink: 'www.#.com',
+    procetImage: 'project-2',
+  },
+  {
+    projectName: 'Image Project 3',
+    projectLink: 'www.#.com',
+    procetImage: 'project-3',
+  },
+  {
+    projectName: 'Image Project 4',
+    projectLink: 'www.#.com',
+    procetImage: 'project-4',
+  },
+  {
+    projectName: 'Image Project 5',
+    projectLink: 'www.#.com',
+    procetImage: 'project-5',
+  },
+  {
+    projectName: 'Image Project 6',
+    projectLink: 'www.#.com',
+    procetImage: 'project-6',
+  },
+  {
+    projectName: 'Image Project 7',
+    projectLink: 'www.#.com',
+    procetImage: 'project-7',
+  },
+  {
+    projectName: 'Image Project 8',
+    projectLink: 'www.#.com',
+    procetImage: 'project-8',
+  },
+  {
+    projectName: 'Image Project 9',
+    projectLink: 'www.#.com',
+    procetImage: 'project-9',
+  },
+];
+
 function Portfolio() {
+  const [isGalleryOpen, setIsGallaryOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(null);
+
+  function handleOpenGallery(i) {
+    setIsGallaryOpen(true);
+    setCurrentSlide(i);
+  }
+
+  function handleCloseGallery() {
+    setIsGallaryOpen(false);
+    setCurrentSlide(null);
+  }
+
   return (
     <div>
       <Background />
       <Navbar />
-      <main className={styles.portfolioContainer}>
+      <main className={`${styles.portfolioContainer} ${isGalleryOpen ? styles.slideshowOpen : ''}`}>
         <div className={styles.title}>
           <div className={styles.transperantTitle}>
             <h1>works</h1>
@@ -23,87 +85,29 @@ function Portfolio() {
           <div className={styles.gridGallery}>
             <section className={styles.gridWrap}>
               <ul className={`${styles.row} ${styles.grid}`}>
-                <li>
-                  <figure>
-                    <img src="projects/project-1.jpg" alt="Portolio Image" />
-                    <div>
-                      <span>Image Project</span>
-                    </div>
-                  </figure>
-                </li>
-
-                <li>
-                  <figure>
-                    <img src="projects/project-2.jpg" alt="Portolio Image" />
-                    <div>
-                      <span>Youtube Project</span>
-                    </div>
-                  </figure>
-                </li>
-
-                <li>
-                  <figure>
-                    <img src="projects/project-3.jpg" alt="Portolio Image" />
-                    <div>
-                      <span>Slider Project</span>
-                    </div>
-                  </figure>
-                </li>
-
-                <li>
-                  <figure>
-                    <img src="projects/project-4.jpg" alt="Portolio Image" />
-                    <div>
-                      <span>Local Video Project</span>
-                    </div>
-                  </figure>
-                </li>
-
-                <li>
-                  <figure>
-                    <img src="projects/project-5.jpg" alt="Portolio Image" />
-                    <div>
-                      <span>Image Project</span>
-                    </div>
-                  </figure>
-                </li>
-
-                <li>
-                  <figure>
-                    <img src="projects/project-6.jpg" alt="Portolio Image" />
-                    <div>
-                      <span>Image Project</span>
-                    </div>
-                  </figure>
-                </li>
-
-                <li>
-                  <figure>
-                    <img src="projects/project-7.jpg" alt="Portolio Image" />
-                    <div>
-                      <span>Image Project</span>
-                    </div>
-                  </figure>
-                </li>
-
-                <li>
-                  <figure>
-                    <img src="projects/project-8.jpg" alt="Portolio Image" />
-                    <div>
-                      <span>Image Project</span>
-                    </div>
-                  </figure>
-                </li>
-
-                <li>
-                  <figure>
-                    <img src="projects/project-9.jpg" alt="Portolio Image" />
-                    <div>
-                      <span>Image Project</span>
-                    </div>
-                  </figure>
-                </li>
+                {projects.map((project, i) => (
+                  <li key={project.procetImage}>
+                    <figure>
+                      <img
+                        onClick={() => handleOpenGallery(i)}
+                        src={`projects/${project.procetImage}.jpg`}
+                        alt="Portolio Image"
+                      />
+                      <div>
+                        <span>{project.projectName}</span>
+                      </div>
+                    </figure>
+                  </li>
+                ))}
               </ul>
+            </section>
+            <section className={styles.slideshow}>
+              <SlideShow
+                isGalleryOpen={isGalleryOpen}
+                handleCloseGallery={handleCloseGallery}
+                currentSlide={currentSlide}
+                projectSlide={projects.at(currentSlide)}
+              />
             </section>
           </div>
         </section>

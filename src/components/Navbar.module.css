@@ -28,9 +28,9 @@
   margin: 10px auto;
   padding: 0 20px;
   width: 55px;
-  transition: opacity 0.3s ease;
+  transition: opacity 1s ease;
   transition: width 0.3s ease;
-  -webkit-transition: opacity 0.3s ease;
+  -webkit-transition: opacity 1s ease;
   -webkit-transition: width 0.3s ease;
 }
 
@@ -58,13 +58,13 @@ a:visited {
   text-decoration: none;
 }
 
-.list :hover {
+.list li:hover {
   background-color: #ffb400;
   cursor: pointer;
   width: 160px;
 }
 
-.list :hover p {
+.list li:hover p {
   opacity: 1;
 }
 
