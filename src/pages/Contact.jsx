@@ -1,4 +1,11 @@
-import { FaEnvelope } from 'react-icons/fa6';
+import { FaXTwitter } from 'react-icons/fa6';
+import {
+  FaEnvelopeOpen,
+  FaPhoneSquareAlt,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+} from 'react-icons/fa';
 import Background from '../components/Background';
 import Navbar from '../components/Navbar';
 import styles from './Contact.module.css';
@@ -26,7 +33,7 @@ function Contact() {
           </p>
           <div className={`${styles.contactInfo}`}>
             <div className={styles.icon}>
-              <FaEnvelope />
+              <FaEnvelopeOpen />
             </div>
             <div className={styles.textPart}>
               <h4>mail me</h4>
@@ -37,7 +44,7 @@ function Contact() {
           </div>
           <div className={`${styles.contactInfo}`}>
             <div className={styles.icon}>
-              <FaEnvelope />
+              <FaPhoneSquareAlt />
             </div>
             <div className={styles.textPart}>
               <h4>call me</h4>
@@ -48,16 +55,16 @@ function Contact() {
           </div>
           <div className={styles.iconDiv}>
             <div>
-              <FaEnvelope />
+              <FaFacebookF />
             </div>
             <div>
-              <FaEnvelope />
+              <FaXTwitter />
             </div>
             <div>
-              <FaEnvelope />
+              <FaLinkedinIn />
             </div>
             <div>
-              <FaEnvelope />
+              <FaInstagram />
             </div>
           </div>
         </section>
