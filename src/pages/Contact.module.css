@@ -1,0 +1,124 @@
+.contactContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2rem;
+  width: 80vw;
+  margin: 0 auto;
+  color: #eee;
+}
+
+.contactContainer .title {
+  position: relative;
+  height: 150px;
+}
+
+.contactContainer .title .transperantTitle {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0;
+  font-weight: 900;
+  opacity: 5%;
+  color: #eee;
+  text-transform: uppercase;
+}
+
+.contactContainer .title .bigTitle {
+  position: absolute;
+  top: 20px;
+  left: 48px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.contactContainer .title h1 {
+  display: flex;
+  margin: 0;
+  font-weight: 900;
+}
+
+.contactContainer .bigTitle span {
+  color: #ffb400;
+}
+
+.contactMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.contactMain .leftSection {
+  width: 40%;
+  margin: 0 20px;
+}
+
+.contactMain .leftSection h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.contactMain .leftSection p {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.contactMain .leftSection .contactInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  text-transform: capitalize;
+  margin: 10px;
+  line-height: 0.2;
+}
+
+.contactMain .leftSection .contactInfo .textPart {
+  width: 80%;
+  flex-direction: column;
+}
+
+.contactMain .leftSection .contactInfo .textPart p {
+  text-transform: lowercase;
+  font-weight: bold;
+}
+
+.contactMain .leftSection .icon {
+  margin: 0 auto;
+  font-size: 3rem;
+  color: #ffb400;
+  margin-right: 10px;
+}
+
+.contactMain .leftSection .iconDiv {
+  /* border: 1px solid red; */
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.contactMain .leftSection .iconDiv div {
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 20%;
+  height: auto; */
+}
+
+.contactMain .leftSection .iconDiv div :first-child {
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
+.contactMain .leftSection .iconDiv :hover {
+  cursor: pointer;
+  background-color: #ffb400;
+}
