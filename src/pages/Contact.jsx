@@ -70,15 +70,15 @@ function Contact() {
         </section>
         <section className={styles.rightSection}>
           <form>
-            <div>
-              <input type="text" placeholder="Your name" />
-              <input type="text" placeholder="Your email" />
-              <input type="text" placeholder="Subject" />
+            <div className={styles.inputFields}>
+              <input type="text" placeholder="YOUR NAME" />
+              <input type="text" placeholder="YOUR EMAIL" />
+              <input type="text" placeholder="SUBJECT" />
             </div>
             <div>
-              <textarea type="text" placeholder="Your message" />
+              <textarea type="text" placeholder="YOUR MESSAGE" />
             </div>
-            <button>send message</button>
+            <button className={styles.btnSendMessage}>SEND MESSAGE</button>
           </form>
         </section>
       </main>

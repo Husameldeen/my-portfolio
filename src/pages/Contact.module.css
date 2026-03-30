@@ -4,8 +4,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1rem 2rem;
-  width: 80vw;
+  width: 70vw;
   margin: 0 auto;
   color: #eee;
 }
@@ -44,6 +43,15 @@
 }
 
 .contactMain {
+  position: relative;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  text-align: center;
+  width: 70vw;
+  margin: 0 auto;
+  color: #eee;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,4 +129,66 @@
 .contactMain .leftSection .iconDiv :hover {
   cursor: pointer;
   background-color: #ffb400;
+}
+
+.contactMain .rightSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 20px;
+}
+
+.contactMain .rightSection .inputFields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.contactMain .rightSection .inputFields input {
+  height: 50px;
+  width: 17vw;
+  margin: 5px;
+  padding: 5px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: #000000;
+  color: #eee;
+  border: none;
+}
+
+.contactMain .rightSection textarea {
+  height: 220px;
+  width: 100%;
+  margin: 5px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 30px;
+  background-color: #000000;
+  color: #eee;
+  border: none;
+}
+
+/* .contactMain .rightSection .inputFields input:focus {
+  border: 2px solid #ffb400;
+}
+
+.contactMain .rightSection textarea:focus {
+  border: 2px solid #ffb400;
+} */
+
+.contactMain .rightSection .btnSendMessage {
+  height: 50px;
+  width: 40%;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin: 20px 5px;
+  background-color: #ffb400;
+  color: #eee;
+  border: none;
+  cursor: pointer;
 }

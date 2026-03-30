@@ -1,4 +1,5 @@
 import styles from './SlideShow.module.css';
+import SlideShowContent from './SlideShowContent';
 
 function slideshow({
   isGalleryOpen,
@@ -11,20 +12,7 @@ function slideshow({
     <>
       <ul className={isGalleryOpen ? `${styles.animatable}` : ''}>
         <li className={`${styles.current} ${isGalleryOpen ? `${styles.show}` : ''} ${styles.hide}`}>
-          <figure>
-            <figcaption>
-              <h3>{projectSlide.projectName}</h3>
-              {/* <div className={styles.row}>
-                <span className={`${styles['ft-wt-600']}`}>
-                  <a href={projectSlide.projectLink} target="_blank">
-                    Preview : {projectSlide.projectLink}
-                  </a>
-                </span>
-              </div> */}
-            </figcaption>
-
-            <img src={`projects/${projectSlide.procetImage}.jpg`} alt={projectSlide.projectName} />
-          </figure>
+          <SlideShowContent projectSlide={projectSlide} />
         </li>
       </ul>
       <nav>

@@ -59,7 +59,7 @@ ul > li.current:after {
     visibility 0s 0.3s;
 }
 
-.show figure {
+/* .show figure {
   display: block;
   width: 65vw;
   height: 70vh;
@@ -67,7 +67,7 @@ ul > li.current:after {
   padding: 30px;
   overflow: auto;
   border-radius: 10px;
-  /**/
+  
 }
 
 .show figure img {
@@ -76,7 +76,7 @@ ul > li.current:after {
   max-height: 60vh;
   background: #252525;
 
-  /**/
+
 }
 
 a {
@@ -101,7 +101,7 @@ figcaption h3 {
   color: #ffb400;
   position: absolute;
   right: 0;
-}
+} */
 
 /* Embedded Videos */
 
