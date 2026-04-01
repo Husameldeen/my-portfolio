@@ -31,12 +31,12 @@ function Navbar() {
             <p>Contact</p>
           </li>
         </NavLink>
-        <NavLink to="/blog">
+        {/* <NavLink to="/blog">
           <li>
             <IoChatbubbles />
             <p>Blog</p>
           </li>
-        </NavLink>
+        </NavLink> */}
       </ul>
     </nav>
   );

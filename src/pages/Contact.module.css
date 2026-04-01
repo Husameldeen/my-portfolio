@@ -172,13 +172,16 @@
   border: none;
 }
 
-/* .contactMain .rightSection .inputFields input:focus {
+.contactMain .rightSection .inputFields input:focus {
+  outline: none;
   border: 2px solid #ffb400;
 }
 
 .contactMain .rightSection textarea:focus {
+  outline: none;
+
   border: 2px solid #ffb400;
-} */
+}
 
 .contactMain .rightSection .btnSendMessage {
   height: 50px;
