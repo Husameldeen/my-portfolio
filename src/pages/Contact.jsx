@@ -9,7 +9,38 @@ import {
 import Background from '../components/Background';
 import Navbar from '../components/Navbar';
 import styles from './Contact.module.css';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 function Contact() {
+  const form = useRef();
+  console.log(form.current[0]);
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+
+    // service_ii61cxt
+    // template_82b2fwf
+    // IiwLtvBqPmy16I7Ie
+
+    var templateParams = {
+      title: 'me',
+      name: 'James',
+      message: 'Check this out!',
+      email: 'husam@gmail.com',
+      time: 'time',
+    };
+
+    emailjs.send('service_ii61cxt', 'template_82b2fwf', templateParams, 'IiwLtvBqPmy16I7Ie').then(
+      () => {
+        console.log('Email sent');
+      },
+      (error) => {
+        console.log(error);
+      },
+    );
+  }
+
   return (
     <div className={styles.contactContainer}>
       <Background />
@@ -69,14 +100,14 @@ function Contact() {
           </div>
         </section>
         <section className={styles.rightSection}>
-          <form>
+          <form ref={form} onSubmit={(e) => handleFormSubmit(e)}>
             <div className={styles.inputFields}>
-              <input type="text" placeholder="YOUR NAME" />
-              <input type="text" placeholder="YOUR EMAIL" />
+              <input type="text" placeholder="name" />
+              <input type="text" placeholder="email" />
               <input type="text" placeholder="SUBJECT" />
             </div>
             <div>
-              <textarea type="text" placeholder="YOUR MESSAGE" />
+              <textarea type="text" placeholder="message" />
             </div>
             <button className={styles.btnSendMessage}>SEND MESSAGE</button>
           </form>

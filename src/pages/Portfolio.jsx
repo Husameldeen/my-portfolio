@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Background from '../components/Background';
 import SlideShow from '../components/SlideShow';
 import Navbar from '../components/Navbar';
@@ -81,6 +81,22 @@ function Portfolio() {
     }
     setCurrentSlide((current) => current - 1);
   }
+
+  useEffect(
+    function () {
+      if (!isGalleryOpen) return;
+
+      const handleEscKey = (e) => {
+        if (e.key === 'Escape') handleCloseGallery();
+      };
+
+      document.addEventListener('keydown', handleEscKey);
+      return () => {
+        document.removeEventListener('keydown', handleEscKey);
+      };
+    },
+    [isGalleryOpen],
+  );
 
   return (
     <div>

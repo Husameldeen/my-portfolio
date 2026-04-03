@@ -8,16 +8,20 @@ function slideshow({
   handleNextSlide,
   handlePrevSlide,
 }) {
+  function handleLiClick(e) {
+    e.stopPropagation();
+  }
+
   return (
     <>
       <ul
         className={`${styles.slideshowComponent} ${isGalleryOpen ? styles.animatable : ''}`}
-        // onClick={handleCloseGallery}
+        onClick={handleCloseGallery}
       >
-        <li className={`${styles.current} ${isGalleryOpen ? styles.show : ''}`}>
-          <SlideShowContent projectSlide={projectSlide} />
-        </li>
-        <li className={styles.hide}>
+        <li
+          className={`${styles.current} ${isGalleryOpen ? styles.show : ''}`}
+          onClick={handleLiClick}
+        >
           <SlideShowContent projectSlide={projectSlide} />
         </li>
       </ul>
