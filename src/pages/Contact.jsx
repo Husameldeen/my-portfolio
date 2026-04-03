@@ -9,12 +9,16 @@ import {
 import Background from '../components/Background';
 import Navbar from '../components/Navbar';
 import styles from './Contact.module.css';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const [title, setTitle] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
   const form = useRef();
-  console.log(form.current[0]);
 
   function handleFormSubmit(e) {
     e.preventDefault();
@@ -23,12 +27,11 @@ function Contact() {
     // template_82b2fwf
     // IiwLtvBqPmy16I7Ie
 
-    var templateParams = {
-      title: 'me',
-      name: 'James',
-      message: 'Check this out!',
-      email: 'husam@gmail.com',
-      time: 'time',
+    const templateParams = {
+      title,
+      name,
+      message,
+      email,
     };
 
     emailjs.send('service_ii61cxt', 'template_82b2fwf', templateParams, 'IiwLtvBqPmy16I7Ie').then(
@@ -102,12 +105,32 @@ function Contact() {
         <section className={styles.rightSection}>
           <form ref={form} onSubmit={(e) => handleFormSubmit(e)}>
             <div className={styles.inputFields}>
-              <input type="text" placeholder="name" />
-              <input type="text" placeholder="email" />
-              <input type="text" placeholder="SUBJECT" />
+              <input
+                type="text"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
             </div>
             <div>
-              <textarea type="text" placeholder="message" />
+              <textarea
+                type="text"
+                placeholder="Your Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
             </div>
             <button className={styles.btnSendMessage}>SEND MESSAGE</button>
           </form>
