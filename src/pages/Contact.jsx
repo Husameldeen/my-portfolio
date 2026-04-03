@@ -1,4 +1,7 @@
-import { FaXTwitter } from 'react-icons/fa6';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { FcOk } from 'react-icons/fc';
+import { FaXTwitter, FaArrowRotateRight } from 'react-icons/fa6';
 import {
   FaEnvelopeOpen,
   FaPhoneSquareAlt,
@@ -6,26 +9,29 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from 'react-icons/fa';
+import { MdCancel } from 'react-icons/md';
 import Background from '../components/Background';
 import Navbar from '../components/Navbar';
 import styles from './Contact.module.css';
-import { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [title, setTitle] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [successMessage, setSuccessMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   const form = useRef();
 
-  function handleFormSubmit(e) {
+  async function handleFormSubmit(e) {
     e.preventDefault();
 
-    // service_ii61cxt
-    // template_82b2fwf
-    // IiwLtvBqPmy16I7Ie
+    if (!title || !name || !message || !email) return;
+
+    setIsLoading(true);
+    setErrorMessage(false);
 
     const templateParams = {
       title,
@@ -34,14 +40,26 @@ function Contact() {
       email,
     };
 
-    emailjs.send('service_ii61cxt', 'template_82b2fwf', templateParams, 'IiwLtvBqPmy16I7Ie').then(
-      () => {
-        console.log('Email sent');
-      },
-      (error) => {
-        console.log(error);
-      },
-    );
+    await emailjs
+      .send('service_ii61cxt', 'template_82b2fwf', templateParams, 'IiwLtvBqPmy16I7Ie')
+      .then(
+        () => {
+          console.log('Email sent');
+          setIsLoading(false);
+          setSuccessMessage(true);
+          setTimeout(() => {
+            setSuccessMessage(false);
+          }, 2000);
+        },
+        (error) => {
+          console.log(error);
+          setIsLoading(false);
+          setErrorMessage(true);
+          setTimeout(() => {
+            setErrorMessage(false);
+          }, 2000);
+        },
+      );
   }
 
   return (
@@ -132,7 +150,26 @@ function Contact() {
                 onChange={(e) => setMessage(e.target.value)}
               />
             </div>
-            <button className={styles.btnSendMessage}>SEND MESSAGE</button>
+            <button className={styles.btnSendMessage}>
+              SEND MESSAGE
+              <span>
+                {isLoading && (
+                  <div className={styles.waiting}>
+                    <FaArrowRotateRight />
+                  </div>
+                )}
+                {successMessage && (
+                  <div className={styles.success}>
+                    <FcOk />
+                  </div>
+                )}
+                {errorMessage && (
+                  <div className={styles.failed}>
+                    <MdCancel />
+                  </div>
+                )}
+              </span>
+            </button>
           </form>
         </section>
       </main>
