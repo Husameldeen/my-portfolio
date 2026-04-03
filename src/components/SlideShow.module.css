@@ -1,4 +1,4 @@
-ul {
+ul.slideshowComponent {
   width: 100%;
   height: 100%;
   -webkit-transform-style: preserve-3d;
@@ -14,15 +14,14 @@ ul.animatable > li {
   transition: transform 0.5s;
 }
 
-ul {
+ul.animatable {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-ul > li.hide {
+ul.slideshowComponent > li {
   width: 66vw;
   height: 66vh;
-  /* max-width: 900px; */
   position: absolute;
   top: 15%;
   left: 15%;
@@ -30,11 +29,12 @@ ul > li.hide {
   visibility: hidden;
 }
 
-ul > li.show {
+ul.slideshowComponent > li.show {
   visibility: visible;
 }
 
-ul > li:after {
+/* ul > li:after {
+  border: 1px solid red;
   content: '';
   position: absolute;
   width: 100%;
@@ -57,7 +57,7 @@ ul > li.current:after {
   transition:
     opacity 0.3s,
     visibility 0s 0.3s;
-}
+} */
 
 /* .show figure {
   display: block;
@@ -160,7 +160,7 @@ figcaption h3 {
 
 /* Navigation */
 
-nav span {
+nav.slideshowNav span {
   position: fixed;
   z-index: 1000;
   text-align: center;
@@ -169,8 +169,8 @@ nav span {
   color: #fff;
 }
 
-nav span.navPrev,
-nav span.navNext {
+nav.slideshowNav span.navPrev,
+nav.slideshowNav span.navNext {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -178,15 +178,15 @@ nav span.navNext {
   line-height: 58px;
 }
 
-nav span.navPrev {
+nav.slideshowNav span.navPrev {
   left: 0;
 }
 
-nav span.navNext {
+nav.slideshowNav span.navNext {
   right: 0;
 }
 
-nav span.navClose {
+nav.slideshowNav span.navClose {
   top: 30px;
   right: 30px;
   padding: 0;

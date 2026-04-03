@@ -93,7 +93,7 @@ function Portfolio() {
           </div>
           <div className={styles.bigTitle}>
             <h1>
-              <span> portfolio</span>
+              <span>portfolio</span>
             </h1>
           </div>
         </div>

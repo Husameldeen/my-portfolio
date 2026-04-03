@@ -10,12 +10,18 @@ function slideshow({
 }) {
   return (
     <>
-      <ul className={isGalleryOpen ? `${styles.animatable}` : ''}>
-        <li className={`${styles.current} ${isGalleryOpen ? `${styles.show}` : ''} ${styles.hide}`}>
+      <ul
+        className={`${styles.slideshowComponent} ${isGalleryOpen ? styles.animatable : ''}`}
+        // onClick={handleCloseGallery}
+      >
+        <li className={`${styles.current} ${isGalleryOpen ? styles.show : ''}`}>
+          <SlideShowContent projectSlide={projectSlide} />
+        </li>
+        <li className={styles.hide}>
           <SlideShowContent projectSlide={projectSlide} />
         </li>
       </ul>
-      <nav>
+      <nav className={styles.slideshowNav}>
         <span className={`${styles.icon} ${styles.navPrev}`} onClick={() => handlePrevSlide()}>
           <img src="projects/navigation/left-arrow.png" alt="previous" />
         </span>

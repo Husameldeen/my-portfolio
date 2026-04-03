@@ -38,7 +38,7 @@ function PersonalInfo() {
           </h3>
         </div>
       </div>
-      <button className={styles.downloadBtn}>download cv</button>
+      {/* <button className={styles.downloadBtn}>download cv</button> */}
     </div>
   );
 }

@@ -19,6 +19,7 @@
   margin: 2rem;
   margin-top: 4rem;
   border-radius: 20px;
+  box-shadow: 0 0 7px rgba(114, 114, 114, 0.9);
 }
 
 .rightContainer {
@@ -39,24 +40,41 @@
   font-weight: 900;
 }
 
-.btn {
+.btnContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  margin: 0 auto;
   margin-top: 20px;
-  width: 160px;
+}
+
+.btn {
+  position: relative;
+  width: 200px;
   height: 40px;
   background-color: #242a2e;
   color: #eee;
   border-radius: 20px;
   border: 2px solid #ffb400;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn :first-child {
+  position: absolute;
+  left: 20px;
+  transform: translateX(20px);
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover :first-child {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .btn:hover {
   background-color: #ffb400;
-  font-weight: 600;
+  /* font-weight: 600; */
+  /* transform: translateX(-10px); */
 }

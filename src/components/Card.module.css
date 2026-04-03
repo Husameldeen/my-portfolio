@@ -1,6 +1,7 @@
 .dataCard {
   position: relative;
   display: flex;
+  background-color: black;
   height: 150px;
   max-width: 400px;
   border: 1px solid #eee;

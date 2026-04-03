@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa6';
+
 import Background from '../components/Background';
 import Navbar from '../components/Navbar';
 import styles from './Home.module.css';
@@ -21,9 +23,14 @@ function Home() {
             Full Stack Developer with fundamental knowledge of HTML, CSS, JS, TypeScript, REACT,
             React 3rd part liberaries, Node.js, Express.js
           </h3>
-          <Link to="/about">
-            <button className={styles.btn}>More About me</button>
-          </Link>
+          <div className={styles.btnContainer}>
+            <Link to="/about">
+              <button className={styles.btn}>
+                <FaUser />
+                <span>More About me</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </main>
     </div>
