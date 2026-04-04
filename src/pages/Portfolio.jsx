@@ -7,7 +7,7 @@ import styles from './Portfolio.module.css';
 const projects = [
   {
     projectName: 'Image Project 1',
-    projectLink: 'www.#.com',
+    projectLink: 'https://smart-brain-frontend-tau.vercel.app/',
     procetImage: 'project-1',
   },
   {
@@ -123,7 +123,7 @@ function Portfolio() {
                       <img
                         onClick={() => handleOpenGallery(i)}
                         src={`projects/${project.procetImage}.jpg`}
-                        alt="Portolio Image"
+                        alt="Portfolio Image"
                       />
                       <div>
                         <span>{project.projectName}</span>
