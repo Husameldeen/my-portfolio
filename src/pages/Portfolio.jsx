@@ -26,9 +26,9 @@ const projects = [
     procetImage: 'database',
   },
   {
-    projectName: 'Image Project 5',
+    projectName: 'React Quiz',
     projectLink: 'www.#.com',
-    procetImage: 'project-5',
+    procetImage: 'react-quiz',
   },
   {
     projectName: 'Image Project 6',
