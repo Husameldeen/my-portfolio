@@ -6,24 +6,24 @@ import styles from './Portfolio.module.css';
 
 const projects = [
   {
-    projectName: 'Image Project 1',
+    projectName: 'Smart Brain',
     projectLink: 'https://smart-brain-frontend-tau.vercel.app/',
-    procetImage: 'project-1',
+    procetImage: 'smart-brain-logo',
   },
   {
-    projectName: 'Image Project 2',
-    projectLink: 'www.#.com',
-    procetImage: 'project-2',
+    projectName: 'Weather App',
+    projectLink: 'https://weatherapp-theta-vert.vercel.app/',
+    procetImage: 'weather-app',
   },
   {
-    projectName: 'Image Project 3',
+    projectName: 'backends',
     projectLink: 'www.#.com',
-    procetImage: 'project-3',
+    procetImage: 'backends',
   },
   {
-    projectName: 'Image Project 4',
+    projectName: 'database',
     projectLink: 'www.#.com',
-    procetImage: 'project-4',
+    procetImage: 'database',
   },
   {
     projectName: 'Image Project 5',
@@ -70,32 +70,36 @@ function Portfolio() {
     if (currentSlide + 1 === projects.length) {
       setCurrentSlide(null);
       setIsGallaryOpen(false);
+    } else {
+      setCurrentSlide((current) => current + 1);
     }
-    setCurrentSlide((current) => current + 1);
   }
 
   function handlePrevSlide() {
     if (currentSlide === 0) {
       setCurrentSlide(null);
       setIsGallaryOpen(false);
+    } else {
+      setCurrentSlide((current) => current - 1);
     }
-    setCurrentSlide((current) => current - 1);
   }
 
   useEffect(
     function () {
       if (!isGalleryOpen) return;
 
-      const handleEscKey = (e) => {
+      const handleKeyCode = (e) => {
         if (e.key === 'Escape') handleCloseGallery();
+        if (e.keyCode === 39) handleNextSlide();
+        if (e.keyCode === 37) handlePrevSlide();
       };
 
-      document.addEventListener('keydown', handleEscKey);
+      document.addEventListener('keydown', handleKeyCode);
       return () => {
-        document.removeEventListener('keydown', handleEscKey);
+        document.removeEventListener('keydown', handleKeyCode);
       };
     },
-    [isGalleryOpen],
+    [isGalleryOpen, handleNextSlide, handlePrevSlide],
   );
 
   return (

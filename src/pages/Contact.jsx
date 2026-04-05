@@ -19,7 +19,7 @@ function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
 
