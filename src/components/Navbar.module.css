@@ -1,4 +1,8 @@
-.nav {
+.mobileNav {
+  display: none;
+}
+
+.deskNav {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -12,14 +16,14 @@
   z-index: 10;
 }
 
-.list {
+.deskNavList {
   position: relative;
   list-style: none;
   margin: 5px;
   padding: 2px;
 }
 
-.list li {
+.deskNavList li {
   position: relative;
   display: flex;
   align-items: center;
@@ -35,17 +39,17 @@
   -webkit-transition: width 0.3s ease;
 }
 
-a:global(.active) li {
+.deskNavList a:global(.active) li {
   background-color: #ffb400;
 }
 
-li :first-child {
+.deskNavList li :first-child {
   position: absolute;
   left: 18px;
   margin-right: 10px;
 }
 
-li p {
+.deskNavList li p {
   color: white;
   background-color: transparent;
   margin-left: 40px;
@@ -60,17 +64,101 @@ a:visited {
   text-decoration: none;
 }
 
-.list li:hover {
+.deskNavList li:hover {
   background-color: #ffb400;
   cursor: pointer;
   width: 160px;
 }
 
-.list li:hover p {
+.deskNavList li:hover p {
   opacity: 1;
   visibility: visible;
 }
 
-.list li :first-child:hover {
+.deskNavList li :first-child:hover {
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .deskNav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: block;
+  }
+
+  .mobileNavToggel {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    right: 0;
+    z-index: 1111;
+    margin: 30px 30px 0 0;
+    font-size: 40px;
+    color: #eee;
+    cursor: pointer;
+  }
+
+  .mobileNavContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    z-index: 111;
+    background-color: #242a2e;
+    transform-origin: 0 0;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .mobileNavContainer.open {
+    transform: translate(0, 0);
+  }
+
+  .mobileList {
+    position: relative;
+    width: 85%;
+    list-style: none;
+  }
+
+  .mobileList li {
+    border-bottom: 1px solid #eeeeee31;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 10px;
+    padding: 0 10px;
+    color: white;
+    border-radius: 30px;
+  }
+
+  .mobileNavContainer a:global(.active) li {
+    color: #ffb400;
+  }
+
+  .mobileNavContainer li :first-child {
+    font-size: 30px;
+    margin-right: 20px;
+  }
+
+  .mobileNavContainer li p {
+    text-transform: uppercase;
+  }
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
 }
