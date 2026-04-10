@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Background from '../components/Background';
 import SlideShow from '../components/SlideShow';
 import Navbar from '../components/Navbar';
@@ -66,23 +66,29 @@ function Portfolio() {
     setCurrentSlide(null);
   }
 
-  function handleNextSlide() {
-    if (currentSlide + 1 === projects.length) {
-      setCurrentSlide(null);
-      setIsGallaryOpen(false);
-    } else {
-      setCurrentSlide((current) => current + 1);
-    }
-  }
+  const handleNextSlide = useCallback(
+    function handleNextSlide() {
+      if (currentSlide + 1 === projects.length) {
+        setCurrentSlide(null);
+        setIsGallaryOpen(false);
+      } else {
+        setCurrentSlide((current) => current + 1);
+      }
+    },
+    [currentSlide],
+  );
 
-  function handlePrevSlide() {
-    if (currentSlide === 0) {
-      setCurrentSlide(null);
-      setIsGallaryOpen(false);
-    } else {
-      setCurrentSlide((current) => current - 1);
-    }
-  }
+  const handlePrevSlide = useCallback(
+    function handlePrevSlide() {
+      if (currentSlide === 0) {
+        setCurrentSlide(null);
+        setIsGallaryOpen(false);
+      } else {
+        setCurrentSlide((current) => current - 1);
+      }
+    },
+    [currentSlide],
+  );
 
   useEffect(
     function () {

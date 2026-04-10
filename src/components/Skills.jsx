@@ -22,6 +22,18 @@ const skills = [
     imgSource: 'nextjs.png',
   },
   {
+    skill: 'nodejs',
+    imgSource: 'nodejs.png',
+  },
+  {
+    skill: 'Git',
+    imgSource: 'Git.png',
+  },
+  {
+    skill: 'GitHub',
+    imgSource: 'GitHub.png',
+  },
+  {
     skill: 'jquery',
     imgSource: 'jquery.png',
   },

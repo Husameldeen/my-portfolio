@@ -19,7 +19,7 @@
   line-height: 1;
   margin: 0;
   font-weight: 900;
-  opacity: 5%;
+  opacity: 15%;
   color: #eee;
   text-transform: uppercase;
 }
@@ -45,7 +45,6 @@
 .contactMain {
   position: relative;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   text-align: center;
   width: 70vw;
@@ -101,7 +100,6 @@
 }
 
 .contactMain .leftSection .iconDiv {
-  /* border: 1px solid red; */
   margin: 10px;
   display: flex;
   justify-content: space-between;
@@ -111,14 +109,12 @@
 }
 
 .contactMain .leftSection .iconDiv div {
-  background-color: black;
+  background-color: #242a2e;
   border-radius: 50%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 20%;
-  height: auto; */
 }
 
 .contactMain .leftSection .iconDiv div :first-child {
@@ -154,7 +150,7 @@
   font-size: 15px;
   font-weight: 600;
   border-radius: 30px;
-  background-color: #000000;
+  background-color: #242a2e;
   color: #eee;
   border: none;
 }
@@ -167,7 +163,7 @@
   font-size: 20px;
   font-weight: 900;
   border-radius: 30px;
-  background-color: #000000;
+  background-color: #242a2e;
   color: #eee;
   border: none;
 }
@@ -199,15 +195,6 @@
   border: none;
   cursor: pointer;
 }
-
-/* .contactMain .rightSection .btnSendMessage span {
-  position: relative;
-  opacity: 1;
-} */
-
-/* .contactMain .rightSection .btnSendMessage:focus span {
-  opacity: 1;
-} */
 
 .contactMain .rightSection .waiting {
   position: relative;
