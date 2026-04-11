@@ -44,6 +44,7 @@
   text-transform: capitalize;
   font-size: 1.3rem;
   font-weight: 500;
+  text-wrap: nowrap;
 }
 
 .infoContainer .info h3 span {
@@ -84,4 +85,33 @@
 
 .infoContainer span {
   color: #ffb400;
+}
+
+@media (max-width: 768px) {
+  .infoContainer .smallTitle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    margin-left: 20px;
+  }
+
+  .infoContainer .smallTitle h2 {
+    font-size: 2rem;
+  }
+
+  .infoContainer .leftInfo,
+  .infoContainer .rightInfo {
+    line-height: 1.5;
+  }
+
+  .infoContainer .downloadBtn {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 740px) {
+  .infoContainer .info h3 {
+    text-wrap: wrap;
+  }
 }

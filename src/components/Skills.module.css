@@ -1,6 +1,6 @@
 .skillsContainer {
   position: relative;
-  align-items: center;
+  /* align-items: center; */
   padding: 1rem 2rem;
   margin-bottom: 10px;
   width: 100%;
@@ -25,7 +25,8 @@
 .skillsContainer .imgContainer {
   display: flex;
   flex-wrap: wrap;
-
+  align-items: center;
+  align-self: center;
   justify-content: space-evenly;
 }
 
@@ -39,7 +40,8 @@
 }
 
 .skillsContainer .imgContainer img {
-  height: 130px;
+  width: 100%;
+  height: auto;
 }
 
 .skillsContainer .imgContainer h6 {
@@ -58,4 +60,10 @@
 
 .skillsContainer span {
   color: #ffb400;
+}
+
+@media (max-width: 410px) {
+  .skillsContainer .imgContainer .img {
+    width: 40%;
+  }
 }
