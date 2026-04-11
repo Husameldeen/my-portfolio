@@ -7,12 +7,12 @@ function SlideShowContent({ projectSlide }) {
         <figcaption>
           <h3>{projectSlide.projectName}</h3>
           {/* <div className={styles.row}>
-                    <span className={`${styles['ft-wt-600']}`}>
-                      <a href={projectSlide.projectLink} target="_blank">
-                        Preview : {projectSlide.projectLink}
-                      </a>
-                    </span>
-                  </div> */}
+            <span className={`${styles['ft-wt-600']}`}>
+              <a href={projectSlide.projectLink} target="_blank">
+                Preview : {projectSlide.projectLink}
+              </a>
+            </span>
+          </div> */}
         </figcaption>
 
         <img src={`projects/${projectSlide.procetImage}.jpg`} alt={projectSlide.projectName} />
