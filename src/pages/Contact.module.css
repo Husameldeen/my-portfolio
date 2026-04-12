@@ -11,6 +11,7 @@
 
 .contactContainer .title {
   position: relative;
+  margin: 25px;
   height: 150px;
 }
 
@@ -228,5 +229,59 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 950px) {
+  .contactMain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin: 0 1rem;
+    color: #eee;
+  }
+
+  .contactMain .leftSection {
+    width: 90%;
+    margin: 0 20px;
+  }
+
+  .contactMain .leftSection .contactInfo {
+    margin: 20px 10px;
+  }
+
+  .contactMain .leftSection .contactInfo .textPart {
+    width: 80vw;
+    flex-direction: column;
+  }
+
+  .contactMain .leftSection .contactInfo .textPart p {
+    font-size: 18px;
+  }
+
+  .contactMain .rightSection {
+    position: relative;
+    width: 70vw;
+  }
+
+  .contactMain .rightSection .inputFields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 70vw;
+  }
+
+  .contactMain .rightSection .inputFields input {
+    height: 60px;
+    width: 70vw;
+  }
+
+  .contactMain .rightSection textarea {
+    height: 220px;
+    width: 70vw;
   }
 }

@@ -36,12 +36,12 @@ function Navbar() {
               <p>Contact</p>
             </li>
           </NavLink>
-          <NavLink to="/blog">
+          {/* <NavLink to="/blog">
             <li>
               <IoChatbubbles />
               <p>Blog</p>
             </li>
-          </NavLink>
+          </NavLink> */}
         </ul>
       </nav>
       <nav className={styles.mobileNav}>
@@ -77,12 +77,12 @@ function Navbar() {
                 <p>Contact</p>
               </li>
             </NavLink>
-            <NavLink to="/blog">
+            {/* <NavLink to="/blog">
               <li>
                 <IoChatbubbles />
                 <p>Blog</p>
               </li>
-            </NavLink>
+            </NavLink> */}
           </ul>
         </div>
       </nav>

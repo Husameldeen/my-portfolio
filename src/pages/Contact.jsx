@@ -8,11 +8,20 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
+  FaWhatsapp,
+  FaTelegramPlane,
 } from 'react-icons/fa';
 import { MdCancel } from 'react-icons/md';
 import Background from '../components/Background';
 import Navbar from '../components/Navbar';
 import styles from './Contact.module.css';
+
+{
+  /* 
+  <FaWhatsapp /> 
+  <FaTelegramPlane />
+  */
+}
 
 function Contact() {
   const [title, setTitle] = useState('');

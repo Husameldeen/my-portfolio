@@ -13,7 +13,7 @@ function About() {
       <Navbar />
       <PersonalInfo />
       <div className={styles.cardsContainer}>
-        <Card number={2}>years of experience</Card>
+        <Card number={1}>years of experience</Card>
         <Card number={10}>number of projects</Card>
         <Card number={5}>number of customers</Card>
       </div>

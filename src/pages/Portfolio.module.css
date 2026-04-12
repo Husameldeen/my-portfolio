@@ -153,12 +153,6 @@
 }
 
 @media (max-width: 768px) {
-  .portfolioContainer .mainContent .grid li {
-    width: 50%;
-    float: left;
-    padding: 15px;
-  }
-
   /* Slideshow */
   .portfolioContainer .slideshow {
     position: fixed;
@@ -187,5 +181,13 @@
     visibility: visible;
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
+  }
+}
+
+@media (max-width: 1080px) {
+  .portfolioContainer .mainContent .grid li {
+    width: 50%;
+    float: left;
+    padding: 15px;
   }
 }
