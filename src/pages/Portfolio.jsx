@@ -26,9 +26,9 @@ const projects = [
     procetImage: 'database',
   },
   {
-    projectName: 'React Quiz',
-    projectLink: 'www.#.com',
-    procetImage: 'react-quiz',
+    projectName: 'usePopcorn',
+    projectLink: 'https://use-popcorn-chi-eight.vercel.app',
+    procetImage: 'use-popcorn',
   },
   {
     projectName: 'Image Project 6',

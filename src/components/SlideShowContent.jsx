@@ -11,7 +11,7 @@ function SlideShowContent({ projectSlide }) {
           <div className={styles.row}>
             <span className={`${showLink ? styles.projectLink : ''}`}>
               <a href={projectSlide.projectLink} target="_blank">
-                Preview : {projectSlide.projectLink}
+                Visit Website
               </a>
             </span>
           </div>
