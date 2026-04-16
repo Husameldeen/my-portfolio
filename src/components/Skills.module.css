@@ -35,6 +35,7 @@
   flex-direction: column;
   align-items: center;
   width: 20%;
+  max-width: 200px;
   margin: 10px;
   transition: transform 0.75s ease;
 }
@@ -60,6 +61,12 @@
 
 .skillsContainer span {
   color: #ffb400;
+}
+
+@media (max-width: 768px) {
+  .skillsContainer .imgContainer .img {
+    width: 25%;
+  }
 }
 
 @media (max-width: 410px) {

@@ -10,6 +10,7 @@ import {
   FaInstagram,
   FaWhatsapp,
   FaTelegramPlane,
+  FaGithub,
 } from 'react-icons/fa';
 import { MdCancel } from 'react-icons/md';
 import Background from '../components/Background';
@@ -119,13 +120,15 @@ function Contact() {
               <FaFacebookF />
             </div>
             <div>
-              <FaXTwitter />
+              <FaWhatsapp />
             </div>
             <div>
               <FaLinkedinIn />
             </div>
             <div>
-              <FaInstagram />
+              <FaGithub>
+                <a href="https://github.com/Husameldeen" target="_blank"></a>
+              </FaGithub>
             </div>
           </div>
         </section>
