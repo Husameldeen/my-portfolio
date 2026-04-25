@@ -49,6 +49,14 @@ const skills = [
     skill: 'npm',
     imgSource: 'npm.png',
   },
+  {
+    skill: 'Tailwind css',
+    imgSource: 'Tailwind CSS.png',
+  },
+  {
+    skill: 'Redux',
+    imgSource: 'Redux.png',
+  },
 ];
 
 function Skills() {
