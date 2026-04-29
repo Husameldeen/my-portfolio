@@ -16,6 +16,11 @@ const projects = [
     procetImage: 'weather-app',
   },
   {
+    projectName: 'Fast Pizza Co',
+    projectLink: 'https://fast-pizza-co-inky.vercel.app',
+    procetImage: 'fast-pizza-co',
+  },
+  {
     projectName: 'backends',
     projectLink: 'www.#.com',
     procetImage: 'backends',
@@ -29,11 +34,6 @@ const projects = [
     projectName: 'usePopcorn',
     projectLink: 'https://use-popcorn-chi-eight.vercel.app',
     procetImage: 'use-popcorn',
-  },
-  {
-    projectName: 'Image Project 6',
-    projectLink: 'www.#.com',
-    procetImage: 'project-6',
   },
   {
     projectName: 'Image Project 7',
