@@ -35,21 +35,6 @@ const projects = [
     projectLink: 'https://use-popcorn-chi-eight.vercel.app',
     procetImage: 'use-popcorn',
   },
-  {
-    projectName: 'Image Project 7',
-    projectLink: 'www.#.com',
-    procetImage: 'project-7',
-  },
-  {
-    projectName: 'Image Project 8',
-    projectLink: 'www.#.com',
-    procetImage: 'project-8',
-  },
-  {
-    projectName: 'Image Project 9',
-    projectLink: 'www.#.com',
-    procetImage: 'project-9',
-  },
 ];
 
 function Portfolio() {

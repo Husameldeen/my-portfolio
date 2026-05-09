@@ -57,6 +57,10 @@ const skills = [
     skill: 'Redux',
     imgSource: 'Redux.png',
   },
+  {
+    skill: 'Supabase',
+    imgSource: 'supabase.png',
+  },
 ];
 
 function Skills() {
